@@ -11,7 +11,7 @@
             background: #000 url('flame.png') no-repeat center center fixed; 
             background-size: cover; color: #fff; min-height: 100vh;
             display: flex; flex-direction: column; align-items: center;
-            justify-content: center; /* Đẩy nội dung vào giữa màn hình */
+            justify-content: center;
         }
 
         /* --- PHẦN TIÊU ĐỀ --- */
@@ -37,12 +37,16 @@
             display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; z-index: 10; 
         }
         
-        /* Cấu hình nút (Dùng !important để tránh bị đổi màu sau khi click) */
+        /* Cấu hình nút bấm - Định nghĩa màu sắc cố định */
         .nav-link, .main-btn { 
-            color: #fff !important; text-decoration: none !important; 
-            border: 1px solid #d4af37; border-radius: 4px; 
+            color: #fff !important; 
+            text-decoration: none !important; 
+            border: 1px solid #d4af37; 
+            border-radius: 4px; 
             background: rgba(0,0,0,0.7) !important; 
-            text-align: center; transition: all 0.3s ease;
+            text-align: center; 
+            display: inline-block;
+            transition: all 0.3s ease !important;
         }
         
         .nav-link { padding: 8px 12px; font-size: 14px; }
@@ -53,7 +57,17 @@
 
         /* Hiệu ứng khi di chuột vào (Hover) */
         .nav-link:hover, .main-btn:hover { 
-            background: #d4af37 !important; color: #000 !important; font-weight: bold; 
+            background: #d4af37 !important; 
+            color: #000 !important; 
+            font-weight: bold; 
+            cursor: pointer;
+        }
+
+        /* Trạng thái sau khi click - Ép giữ nguyên style */
+        .nav-link:visited, .nav-link:active, .nav-link:focus,
+        .main-btn:visited, .main-btn:active, .main-btn:focus {
+            color: #fff !important;
+            background: rgba(0,0,0,0.7) !important;
         }
 
         /* --- TỐI ƯU MOBILE --- */
@@ -75,11 +89,11 @@
         <div class="title-desc">Lâu Dài - Cày Cuốc</div>
     </div>
 
-   <div class="top-right-nav">
+    <div class="top-right-nav">
         <a href="https://drive.google.com/file/d/10TdXh1X7k9XyNB99wb3Z9QVw5GOf9QM9/view?usp=drive_link" class="nav-link">Tải Google</a>
         <a href="https://mega.nz/file/SiIBDJSR#Y-kVmc9Brr62-6tx1yFAnzY6l_3KPxuYkL2lH8A5eYY" class="nav-link">Tải Mega</a>
-        <a href="LINK_NHOM" class="nav-link">Zalo/Discord</a>
-        <a href="LINK_FANPAGE" class="nav-link">Fanpage</a>
+        <a href="#" class="nav-link">Zalo/Discord</a>
+        <a href="#" class="nav-link">Fanpage</a>
     </div>
 
     <div class="center-menu">
