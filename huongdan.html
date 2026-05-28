@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Hướng dẫn Boss & Drop - FlameMu</title>
+    <title>Hướng dẫn Cộng Hưởng - FlameMu</title>
     <style>
         body { background: #000; color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
         .wrapper { display: flex; max-width: 1000px; margin: 20px auto; gap: 20px; padding: 10px; }
@@ -12,13 +12,16 @@
         .sidebar a:hover { color: #d4af37; }
 
         .main-content { flex: 1; background: rgba(20, 20, 20, 0.9); border: 1px solid #d4af37; padding: 30px; }
-        h1 { color: #d4af37; margin-bottom: 20px; }
+        h1 { color: #d4af37; margin-bottom: 30px; }
 
-        /* Bảng Boss Drop */
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { border: 1px solid #555; padding: 12px; text-align: left; }
-        th { background: #333; color: #d4af37; }
-        tr:nth-child(even) { background: #1a1a1a; }
+        .timeline { list-style: none; padding: 0; }
+        .timeline-item { margin-bottom: 30px; border-left: 3px solid #d4af37; padding-left: 20px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: #d4af37; border-radius: 50%; }
+        
+        /* ĐỔI MÀU TEXT Ở ĐÂY */
+        .step-title { color: #ffffff; font-weight: bold; font-size: 1.3em; margin-bottom: 10px; }
+        .step-detail { margin-bottom: 5px; color: #ccc; }
+        .label { color: #d4af37; } /* Màu vàng cho các nhãn Địa điểm, Nguyên liệu */
         
         .back-link { display: inline-block; margin-top: 30px; color: #d4af37; text-decoration: none; border: 1px solid #d4af37; padding: 8px 15px; }
     </style>
