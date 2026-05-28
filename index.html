@@ -3,44 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BastVN MuOnline</title>
+    <title>BastMuOnline - Vietnam Server</title>
     <style>
-        /* CSS Cơ bản */
-        body { margin: 0; font-family: Arial; background: #000; color: #fff; }
-        .menu { display: flex; gap: 20px; padding: 20px; justify-content: center; }
-        .menu-item { cursor: pointer; padding: 10px; background: #333; border-radius: 5px; }
+        body { 
+            margin: 0; padding: 0; font-family: Arial, sans-serif; 
+            background: #000 url('edited-image.jpg') no-repeat center center fixed; 
+            background-size: cover; color: #fff;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            min-height: 100vh;
+        }
+        .container { text-align: center; width: 90%; }
+        .menu { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px; }
+        .menu-item { 
+            cursor: pointer; padding: 12px 20px; background: rgba(0,0,0,0.7); 
+            border: 1px solid #d4af37; color: #fff; border-radius: 5px; transition: 0.3s;
+        }
+        .menu-item:hover { background: #d4af37; color: #000; }
+        a { color: #fff; text-decoration: none; }
         
-        /* CSS cho các lớp phụ (Popup) */
+        /* Popup */
         .sub-page { 
             display: none; position: fixed; top: 10%; left: 10%; width: 80%; height: 80%; 
-            background: rgba(0,0,0,0.9); border: 2px solid #d4af37; padding: 20px; z-index: 100;
+            background: rgba(0,0,0,0.95); border: 2px solid #d4af37; padding: 20px; z-index: 100; overflow-y: auto;
         }
-        .close-btn { cursor: pointer; color: red; font-weight: bold; }
+        .close-btn { cursor: pointer; color: red; font-weight: bold; display: block; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
-    <div class="menu">
-        <div class="menu-item">
-            Tải Game: <a href="LINK_GOOGLE" style="color:white">Google</a> / <a href="LINK_MEGA" style="color:white">Mega</a>
+    <div class="container">
+        <h1>BAST MUONLINE</h1>
+        <div class="menu">
+            <div class="menu-item">Tải Game: <a href="LINK_GOOGLE">Google</a> / <a href="LINK_MEGA">Mega</a></div>
+            <div class="menu-item"><a href="LINK_NHOM">Nhóm (Zalo/Discord)</a></div>
+            <div class="menu-item"><a href="LINK_FANPAGE">Fanpage FB</a></div>
+            <div class="menu-item" onclick="showPage('roadmap-page')">Lộ trình</div>
+            <div class="menu-item" onclick="showPage('info-page')">Thông tin Server</div>
+            <div class="menu-item" onclick="showPage('guide-page')">Hướng dẫn Boss/Drop</div>
         </div>
-        <div class="menu-item"><a href="LINK_NHOM" style="color:white; text-decoration:none">Nhóm (Zalo/Discord)</a></div>
-        <div class="menu-item"><a href="LINK_FANPAGE" style="color:white; text-decoration:none">Fanpage FB</a></div>
-        <div class="menu-item" onclick="showPage('info-page')">Thông tin Server</div>
-        <div class="menu-item" onclick="showPage('guide-page')">Hướng dẫn Boss/Drop</div>
     </div>
 
-    <div id="info-page" class="sub-page">
-        <span class="close-btn" onclick="hidePage('info-page')">X ĐÓNG</span>
-        <h2>Thông tin Server</h2>
-        <p>Đây là nội dung thông tin server của bạn...</p>
-    </div>
-
-    <div id="guide-page" class="sub-page">
-        <span class="close-btn" onclick="hidePage('guide-page')">X ĐÓNG</span>
-        <h2>Hướng dẫn Boss & Drop</h2>
-        <p>Chi tiết các vị trí Boss và tỷ lệ rớt đồ...</p>
-    </div>
+    <div id="roadmap-page" class="sub-page"><span class="close-btn" onclick="hidePage('roadmap-page')">X ĐÓNG</span><h2>Lộ trình Server</h2><p>Nội dung lộ trình...</p></div>
+    <div id="info-page" class="sub-page"><span class="close-btn" onclick="hidePage('info-page')">X ĐÓNG</span><h2>Thông tin Server</h2><p>Nội dung thông tin...</p></div>
+    <div id="guide-page" class="sub-page"><span class="close-btn" onclick="hidePage('guide-page')">X ĐÓNG</span><h2>Hướng dẫn Boss & Drop</h2><p>Nội dung hướng dẫn...</p></div>
 
     <script>
         function showPage(id) { document.getElementById(id).style.display = 'block'; }
