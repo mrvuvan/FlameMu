@@ -2,49 +2,68 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BastVN MuOnline</title>
+    <title>Thông tin Server - FlameMu</title>
     <style>
-        /* CSS Cơ bản */
-        body { margin: 0; font-family: Arial; background: #000; color: #fff; }
-        .menu { display: flex; gap: 20px; padding: 20px; justify-content: center; }
-        .menu-item { cursor: pointer; padding: 10px; background: #333; border-radius: 5px; }
+        body { background: #000; color: #fff; font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; }
         
-        /* CSS cho các lớp phụ (Popup) */
-        .sub-page { 
-            display: none; position: fixed; top: 10%; left: 10%; width: 80%; height: 80%; 
-            background: rgba(0,0,0,0.9); border: 2px solid #d4af37; padding: 20px; z-index: 100;
-        }
-        .close-btn { cursor: pointer; color: red; font-weight: bold; }
+        /* Layout chính */
+        .wrapper { display: flex; max-width: 1200px; margin: 20px auto; gap: 20px; padding: 10px; }
+        
+        /* Thanh menu trái */
+        .sidebar { width: 250px; background: rgba(20, 20, 20, 0.9); border: 1px solid #d4af37; padding: 20px; height: fit-content; }
+        .sidebar h3 { color: #d4af37; border-bottom: 1px solid #d4af37; padding-bottom: 5px; }
+        .sidebar a { display: block; color: #fff; text-decoration: none; padding: 10px 0; border-bottom: 1px solid #333; }
+        .sidebar a:hover { color: #d4af37; }
+        
+        /* Nội dung phải */
+        .main-content { flex: 1; background: rgba(20, 20, 20, 0.9); border: 1px solid #d4af37; padding: 30px; }
+        h1 { color: #d4af37; margin-top: 0; }
+        .back-link { display: inline-block; margin-top: 30px; color: #d4af37; text-decoration: none; border: 1px solid #d4af37; padding: 8px 15px; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; color: #fff; }
+        th, td { border: 1px solid #555; padding: 10px; text-align: left; }
+        th { background: #333; }
     </style>
 </head>
 <body>
 
-    <div class="menu">
-        <div class="menu-item">
-            Tải Game: <a href="LINK_GOOGLE" style="color:white">Google</a> / <a href="LINK_MEGA" style="color:white">Mega</a>
-        </div>
-        <div class="menu-item"><a href="LINK_NHOM" style="color:white; text-decoration:none">Nhóm (Zalo/Discord)</a></div>
-        <div class="menu-item"><a href="LINK_FANPAGE" style="color:white; text-decoration:none">Fanpage FB</a></div>
-        <div class="menu-item" onclick="showPage('info-page')">Thông tin Server</div>
-        <div class="menu-item" onclick="showPage('guide-page')">Hướng dẫn Boss/Drop</div>
+<div class="wrapper">
+    <div class="sidebar">
+        <h3>Menu</h3>
+        <a href="index.html">Trang chủ</a>
+        <a href="thongtin.html">Thông tin Server</a>
+        <a href="lotrinh.html">Lộ trình</a>
+        <a href="huongdan.html">Hướng dẫn Boss</a>
     </div>
 
-    <div id="info-page" class="sub-page">
-        <span class="close-btn" onclick="hidePage('info-page')">X ĐÓNG</span>
-        <h2>Thông tin Server</h2>
-        <p>Đây là nội dung thông tin server của bạn...</p>
-    </div>
+    <div class="main-content">
+        <h1>Thông tin Server</h1>
+        <p>Chào mừng các chiến binh đến với FlameMu. Đây là nơi chứa thông tin chi tiết về cài đặt server:</p>
+        
+        <table>
+            <tr>
+                <th>Cấu hình</th>
+                <th>Chi tiết</th>
+            </tr>
+            <tr>
+                <td>Kinh nghiệm (Exp)</td>
+                <td>X100</td>
+            </tr>
+            <tr>
+                <td>Tỷ lệ rớt đồ</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>Phiên bản</td>
+                <td>Season 2.0</td>
+            </tr>
+        </table>
 
-    <div id="guide-page" class="sub-page">
-        <span class="close-btn" onclick="hidePage('guide-page')">X ĐÓNG</span>
-        <h2>Hướng dẫn Boss & Drop</h2>
-        <p>Chi tiết các vị trí Boss và tỷ lệ rớt đồ...</p>
+        <p><i>Bạn có thể chỉnh sửa các bảng này hoặc thêm hình ảnh vào đây để trang web sinh động hơn.</i></p>
+        
+        <a href="index.html" class="back-link">← Quay lại trang chủ</a>
     </div>
+</div>
 
-    <script>
-        function showPage(id) { document.getElementById(id).style.display = 'block'; }
-        function hidePage(id) { document.getElementById(id).style.display = 'none'; }
-    </script>
 </body>
 </html>
