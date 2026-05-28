@@ -3,28 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlameMu</title>
+    <title>FlameMu - Trang Chủ</title>
     <style>
-        body { margin: 0; padding: 0; font-family: Arial, sans-serif; background: #000; color: #fff; min-height: 100vh; }
+        body { 
+            margin: 0; padding: 0; font-family: Arial, sans-serif; 
+            background: #000; color: #fff; min-height: 100vh; 
+        }
         
-        /* Góc trên bên phải */
+        /* Menu góc phải */
         .top-right-nav { position: absolute; top: 20px; right: 20px; display: flex; gap: 15px; }
-        .nav-link { color: #fff; text-decoration: none; padding: 8px 12px; border: 1px solid #d4af37; border-radius: 4px; font-size: 14px; }
+        .nav-link { 
+            color: #fff; text-decoration: none; padding: 8px 12px; 
+            border: 1px solid #d4af37; border-radius: 4px; font-size: 14px; 
+        }
         
-        /* Giữa màn hình */
+        /* Menu giữa */
         .center-menu { 
-            display: flex; flex-direction: column; align-items: center; justify-content: center; 
-            min-height: 100vh; gap: 20px; 
+            display: flex; flex-direction: column; align-items: center; 
+            padding-top: 25vh; /* Đẩy xuống 1/4 màn hình */
+            gap: 20px; 
         }
         .main-btn { 
             cursor: pointer; padding: 15px 30px; background: rgba(0,0,0,0.7); 
-            border: 1px solid #d4af37; color: #fff; border-radius: 5px; width: 250px; text-align: center;
+            border: 1px solid #d4af37; color: #fff; border-radius: 5px; 
+            width: 250px; text-align: center; text-decoration: none;
         }
         .main-btn:hover { background: #d4af37; color: #000; }
-
-        /* Popup */
-        .sub-page { display: none; position: fixed; top: 10%; left: 10%; width: 80%; height: 80%; background: rgba(0,0,0,0.95); border: 2px solid #d4af37; padding: 20px; z-index: 100; overflow-y: auto; }
-        .close-btn { cursor: pointer; color: red; font-weight: bold; display: block; margin-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -39,19 +43,10 @@
 
     <!-- GIỮA MÀN HÌNH -->
     <div class="center-menu">
-        <div class="main-btn" onclick="showPage('info-page')">Thông tin Server</div>
-        <div class="main-btn" onclick="showPage('roadmap-page')">Lộ trình</div>
-        <div class="main-btn" onclick="showPage('guide-page')">Hướng dẫn Boss/Drop</div>
+        <a href="thongtin.html" class="main-btn">Thông tin Server</a>
+        <a href="lotrinh.html" class="main-btn">Lộ trình</a>
+        <a href="huongdan.html" class="main-btn">Hướng dẫn Boss/Drop</a>
     </div>
 
-    <!-- CÁC TRANG PHỤ -->
-    <div id="info-page" class="sub-page"><span class="close-btn" onclick="hidePage('info-page')">X ĐÓNG</span><h2>Thông tin Server</h2></div>
-    <div id="roadmap-page" class="sub-page"><span class="close-btn" onclick="hidePage('roadmap-page')">X ĐÓNG</span><h2>Lộ trình Server</h2></div>
-    <div id="guide-page" class="sub-page"><span class="close-btn" onclick="hidePage('guide-page')">X ĐÓNG</span><h2>Hướng dẫn Boss & Drop</h2></div>
-
-    <script>
-        function showPage(id) { document.getElementById(id).style.display = 'block'; }
-        function hidePage(id) { document.getElementById(id).style.display = 'none'; }
-    </script>
 </body>
 </html>
