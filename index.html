@@ -7,64 +7,61 @@
     <style>
         body { 
             margin: 0; padding: 0; font-family: Arial, sans-serif; 
-            background: #000 url('2651841.jpg') no-repeat center center fixed; 
+            background: #000 url('flame.png') no-repeat center center fixed; 
             background-size: cover; color: #fff; min-height: 100vh;
             display: flex; flex-direction: column; align-items: center;
+            justify-content: center; /* Đưa toàn bộ nội dung ra giữa */
         }
 
         /* --- PHẦN TIÊU ĐỀ --- */
-        .header-text { 
-            text-align: center; margin-top: 50px; z-index: 5; 
+        .header-text { text-align: center; z-index: 5; margin-bottom: 50px; }
+        
+        .title-main { 
+            color: red; font-size: 5.25vw; font-weight: bold; /* Tăng 1.5 lần */
+            -webkit-text-stroke: 1px #fff; text-stroke: 1px #fff; /* Hiệu ứng viền */
         }
-        .title-main { color: red; font-size: 3.5vw; font-weight: bold; text-shadow: 2px 2px 4px #000; }
-        .title-sub { color: #ff00ff; font-size: 2.5vw; font-weight: bold; margin-top: 10px; }
-        .title-desc { color: blue; font-size: 2vw; font-weight: bold; margin-top: 10px; }
+        .title-sub { 
+            color: #ff00ff; font-size: 2.5vw; font-weight: bold; margin-top: 10px;
+            -webkit-text-stroke: 0.5px #fff; text-stroke: 0.5px #fff;
+            text-decoration: underline; text-underline-offset: 8px; /* Gạch chân */
+        }
+        .title-desc { 
+            color: blue; font-size: 3vw; font-weight: bold; margin-top: 15px;
+            -webkit-text-stroke: 1px #fff; text-stroke: 1px #fff;
+        }
 
         /* Menu góc phải trên */
         .top-right-nav { position: absolute; top: 20px; right: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; z-index: 10; }
         .nav-link { color: #fff; text-decoration: none; padding: 8px 12px; border: 1px solid #d4af37; border-radius: 4px; font-size: 14px; background: rgba(0,0,0,0.6); text-align: center; }
 
         /* Menu 3 nút giữa */
-        .center-menu { 
-            display: flex; flex-direction: column; align-items: center; 
-            position: absolute; bottom: 15%; gap: 15px; 
-        }
-        .main-btn { 
-            cursor: pointer; padding: 12px 25px; background: rgba(0,0,0,0.6); 
-            border: 1px solid #d4af37; color: #fff; border-radius: 5px; 
-            width: 220px; text-align: center; text-decoration: none;
-        }
+        .center-menu { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        .main-btn { cursor: pointer; padding: 12px 25px; background: rgba(0,0,0,0.6); border: 1px solid #d4af37; color: #fff; border-radius: 5px; width: 220px; text-align: center; text-decoration: none; }
 
         /* --- TỐI ƯU MOBILE --- */
         @media (max-width: 768px) {
-            .title-main { font-size: 8vw; }
-            .title-sub { font-size: 6vw; }
-            .title-desc { font-size: 5vw; }
+            .title-main { font-size: 12vw; }
+            .title-sub { font-size: 7vw; }
+            .title-desc { font-size: 8vw; }
             .top-right-nav { top: 10px; left: 10px; right: 10px; }
-            .nav-link { font-size: 10px; padding: 5px; }
-            .center-menu { bottom: 10%; }
+            .nav-link { font-size: 9px; padding: 4px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- TIÊU ĐỀ -->
     <div class="header-text">
-        <div class="title-main">Flame-MuOnline</div>
+        <div class="title-main">Flame - MuOnline</div>
         <div class="title-sub">Season2 - Reset</div>
         <div class="title-desc">Lâu Dài - Cày Cuốc</div>
     </div>
 
-    <!-- MENU GÓC PHẢI -->
-    <div class="top-right-nav">
+      <div class="top-right-nav">
         <a href="https://drive.google.com/file/d/10TdXh1X7k9XyNB99wb3Z9QVw5GOf9QM9/view?usp=drive_link" class="nav-link">Tải Google</a>
         <a href="https://mega.nz/file/SiIBDJSR#Y-kVmc9Brr62-6tx1yFAnzY6l_3KPxuYkL2lH8A5eYY" class="nav-link">Tải Mega</a>
         <a href="LINK_NHOM" class="nav-link">Zalo/Discord</a>
         <a href="LINK_FANPAGE" class="nav-link">Fanpage</a>
     </div>
-
-
-    <!-- 3 NÚT GIỮA -->
     <div class="center-menu">
         <a href="thongtin.html" class="main-btn">Thông tin Server</a>
         <a href="lotrinh.html" class="main-btn">Lộ trình</a>
