@@ -7,15 +7,19 @@
     <style>
         body { 
             margin: 0; padding: 0; font-family: Arial, sans-serif; 
-            background: #000; color: #fff; min-height: 100vh; 
+            /* Ảnh nền flame.png được thiết lập ở đây */
+            background: #000 url('flame.png') no-repeat center center fixed; 
+            background-size: cover; 
+            color: #fff; min-height: 100vh; 
         }
         
         /* Menu góc phải */
         .top-right-nav { position: absolute; top: 20px; right: 20px; display: flex; gap: 15px; }
         .nav-link { 
             color: #fff; text-decoration: none; padding: 8px 12px; 
-            border: 1px solid #d4af37; border-radius: 4px; font-size: 14px; 
+            border: 1px solid #d4af37; border-radius: 4px; font-size: 14px; background: rgba(0,0,0,0.5);
         }
+        .nav-link:hover { background: #d4af37; color: #000; }
         
         /* Menu giữa */
         .center-menu { 
@@ -26,14 +30,13 @@
         .main-btn { 
             cursor: pointer; padding: 15px 30px; background: rgba(0,0,0,0.7); 
             border: 1px solid #d4af37; color: #fff; border-radius: 5px; 
-            width: 250px; text-align: center; text-decoration: none;
+            width: 250px; text-align: center; text-decoration: none; transition: 0.3s;
         }
         .main-btn:hover { background: #d4af37; color: #000; }
     </style>
 </head>
 <body>
 
-    <!-- GÓC TRÊN BÊN PHẢI -->
     <div class="top-right-nav">
         <a href="LINK_GOOGLE" class="nav-link">Tải Google</a>
         <a href="LINK_MEGA" class="nav-link">Tải Mega</a>
@@ -41,7 +44,6 @@
         <a href="LINK_FANPAGE" class="nav-link">Fanpage</a>
     </div>
 
-    <!-- GIỮA MÀN HÌNH -->
     <div class="center-menu">
         <a href="thongtin.html" class="main-btn">Thông tin Server</a>
         <a href="lotrinh.html" class="main-btn">Lộ trình</a>
