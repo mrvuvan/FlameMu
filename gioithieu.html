@@ -2,27 +2,40 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Thông tin Server - FlameMu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu - Mu-Hanoi2</title>
     <style>
-        body { background: #000; color: #fff; font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; }
+        body { 
+            margin: 0; padding: 0; font-family: Arial, sans-serif; 
+            background: #000; color: #fff; min-height: 100vh;
+            display: flex; flex-direction: column; align-items: center; padding: 20px;
+        }
         
-        /* Layout chính */
-        .wrapper { display: flex; max-width: 1200px; margin: 20px auto; gap: 20px; padding: 10px; }
-        
-        /* Thanh menu trái */
-        .sidebar { width: 250px; background: rgba(20, 20, 20, 0.9); border: 1px solid #d4af37; padding: 20px; height: fit-content; }
-        .sidebar h3 { color: #d4af37; border-bottom: 1px solid #d4af37; padding-bottom: 5px; }
-        .sidebar a { display: block; color: #fff; text-decoration: none; padding: 10px 0; border-bottom: 1px solid #333; }
-        .sidebar a:hover { color: #d4af37; }
-        
-        /* Nội dung phải */
-        .main-content { flex: 1; background: rgba(20, 20, 20, 0.9); border: 1px solid #d4af37; padding: 30px; }
-        h1 { color: #d4af37; margin-top: 0; }
-        .back-link { display: inline-block; margin-top: 30px; color: #d4af37; text-decoration: none; border: 1px solid #d4af37; padding: 8px 15px; }
-        
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; color: #fff; }
-        th, td { border: 1px solid #555; padding: 10px; text-align: left; }
-        th { background: #333; }
+        .nav-menu {
+            margin-bottom: 30px; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+        }
+        .nav-link {
+            color: #fff !important; text-decoration: none !important;
+            border: 1px solid #d4af37; padding: 8px 15px; border-radius: 4px;
+            background: rgba(0,0,0,0.7); transition: 0.3s;
+        }
+        .nav-link:hover { background: #d4af37; color: #000 !important; font-weight: bold; }
+
+        .container { 
+            max-width: 800px; width: 100%; 
+            background: rgba(20, 20, 20, 0.9); 
+            padding: 40px; border: 1px solid #d4af37; border-radius: 8px;
+        }
+
+        .section-title { 
+            color: #d4af37; font-size: 1.4em; font-weight: bold; 
+            margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #d4af37; 
+            padding-bottom: 5px; display: inline-block;
+        }
+
+        .content { line-height: 1.6; color: #ccc; }
+        .content p { margin: 8px 0; }
+        .footer-note { text-align: center; margin-top: 30px; font-style: italic; color: #d4af37; }
     </style>
 </head>
 <body>
