@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlameMu - Trang Chủ</title>
+    <title>Mu-Hanoi2 - Huyền Thoại Trở Lại</title>
     <style>
         /* Reset cơ bản */
         body { 
@@ -30,6 +30,10 @@
             color: blue; font-size: 3vw; font-weight: bold; margin-top: 15px;
             -webkit-text-stroke: 1.5px #fff; text-stroke: 1.5px #fff;
         }
+        .open-date { 
+            color: #d4af37; font-size: 2.2vw; font-weight: bold; margin-top: 15px;
+            text-transform: uppercase;
+        }
 
         /* Menu góc phải trên */
         .top-right-nav { 
@@ -51,7 +55,7 @@
         
         .nav-link { padding: 8px 12px; font-size: 14px; }
         
-        /* Menu 3 nút giữa (đã chỉnh lại gap cho đẹp khi thêm nút mới) */
+        /* Menu chính */
         .center-menu { display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%; }
         .main-btn { padding: 10px 25px; width: 220px; font-size: 16px; }
 
@@ -63,18 +67,12 @@
             cursor: pointer;
         }
 
-        /* Trạng thái sau khi click - Ép giữ nguyên style */
-        .nav-link:visited, .nav-link:active, .nav-link:focus,
-        .main-btn:visited, .main-btn:active, .main-btn:focus {
-            color: #fff !important;
-            background: rgba(0,0,0,0.7) !important;
-        }
-
         /* --- TỐI ƯU MOBILE --- */
         @media (max-width: 768px) {
             .title-main { font-size: 10vw; }
             .title-sub { font-size: 5vw; }
             .title-desc { font-size: 7vw; }
+            .open-date { font-size: 4.5vw; }
             .top-right-nav { top: 10px; left: 10px; right: 10px; }
             .nav-link { font-size: 10px; padding: 4px; }
             .main-btn { width: 80%; padding: 8px; font-size: 14px; }
@@ -87,6 +85,7 @@
         <div class="title-main">Mu-Hanoi2</div>
         <div class="title-sub">Season2 - Reset</div>
         <div class="title-desc">Lâu Dài - Cày Cuốc</div>
+        <div class="open-date">Open Chính thức 10h - ngày 06/06/2026</div>
     </div>
 
     <div class="top-right-nav">
